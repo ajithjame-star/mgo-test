@@ -1,0 +1,14 @@
+name: macOS Runner Proof
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-macos:
+    runs-on: macos-latest
+    steps:
+      - name: macOS version
+        run: sw_vers
+
+      - name: Xcode version
+        run: xcodebuild -version
